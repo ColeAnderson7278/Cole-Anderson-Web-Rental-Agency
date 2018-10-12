@@ -40,6 +40,7 @@ function carRentButton() {
                     inStock: (item.inStock -= 1)
                 });
                 addToCart();
+                addToTotal(item.price);
                 document.querySelector("#carListLocation").innerHTML = html;
             } else {
                 var html = template({
@@ -67,6 +68,7 @@ function truckRentButton() {
                     inStock: (item.inStock -= 1)
                 });
                 addToCart();
+                addToTotal(item.price);
                 document.querySelector("#truckListLocation").innerHTML = html;
             } else {
                 var html = template({
@@ -94,6 +96,7 @@ function motorcycleRentButton() {
                     inStock: (item.inStock -= 1)
                 });
                 addToCart();
+                addToTotal(item.price);
                 document.querySelector(
                     "#motorcycleListLocation"
                 ).innerHTML = html;
@@ -118,6 +121,11 @@ document
 function addToCart() {
     var shoppingCart = document.querySelector("#shoppingCartNum");
     shoppingCart.innerHTML = Number(shoppingCart.innerHTML) + 1;
+}
+
+function addToTotal(price) {
+    var total = document.querySelector("#totalNum");
+    total.innerHTML = Number(total.innerHTML) + Number(price);
 }
 
 function showForm() {
