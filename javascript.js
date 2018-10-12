@@ -30,29 +30,87 @@ function makingItemList() {
 
 makingItemList();
 
-// function carRentButton() {
-//     for (item of PAGE_DATA.items) {
-//         if (item.name === "Car" && item.inStock > -1) {
-//             var html = template({
-//                 name: item.name,
-//                 price: item.price,
-//                 inStock: (item.inStock -= 1)
-//             });
-//             document.querySelector("#carListLocation").innerHTML = html;
-//         } else {
-//             var html = template({
-//                 name: item.name,
-//                 price: item.price,
-//                 inStock: 0
-//             });
-//             document.querySelector("#carListLocation").innerHTML = html;
-//         }
-//     }
-// }
+function carRentButton() {
+    for (item of PAGE_DATA.items) {
+        if (item.name === "Car") {
+            if (item.inStock > 0) {
+                var html = template({
+                    name: item.name,
+                    price: item.price,
+                    inStock: (item.inStock -= 1)
+                });
+                document.querySelector("#carListLocation").innerHTML = html;
+            } else {
+                var html = template({
+                    name: item.name,
+                    price: item.price,
+                    inStock: 0
+                });
+                document.querySelector("#carListLocation").innerHTML = html;
+            }
+        }
+    }
+}
 
-// document
-//     .querySelector("#carListLocation")
-//     .addEventListener("click", carRentButton);
+document
+    .querySelector("#carListLocation")
+    .addEventListener("click", carRentButton);
+
+function truckRentButton() {
+    for (item of PAGE_DATA.items) {
+        if (item.name === "Truck") {
+            if (item.inStock > 0) {
+                var html = template({
+                    name: item.name,
+                    price: item.price,
+                    inStock: (item.inStock -= 1)
+                });
+                document.querySelector("#truckListLocation").innerHTML = html;
+            } else {
+                var html = template({
+                    name: item.name,
+                    price: item.price,
+                    inStock: 0
+                });
+                document.querySelector("#truckListLocation").innerHTML = html;
+            }
+        }
+    }
+}
+
+document
+    .querySelector("#truckListLocation")
+    .addEventListener("click", truckRentButton);
+
+function motorcycleRentButton() {
+    for (item of PAGE_DATA.items) {
+        if (item.name === "Motorcycle") {
+            if (item.inStock > 0) {
+                var html = template({
+                    name: item.name,
+                    price: item.price,
+                    inStock: (item.inStock -= 1)
+                });
+                document.querySelector(
+                    "#motorcycleListLocation"
+                ).innerHTML = html;
+            } else {
+                var html = template({
+                    name: item.name,
+                    price: item.price,
+                    inStock: 0
+                });
+                document.querySelector(
+                    "#motorcycleListLocation"
+                ).innerHTML = html;
+            }
+        }
+    }
+}
+
+document
+    .querySelector("#motorcycleListLocation")
+    .addEventListener("click", motorcycleRentButton);
 
 function showForm() {
     formTemplate = `<form class="ml-1">
