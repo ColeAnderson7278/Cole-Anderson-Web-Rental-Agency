@@ -13,11 +13,31 @@
 </head>
 
 <body>
+    <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4 pl-4">Rental Agency</h1>
+    </div>
+    <div>
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-header">In-Stock:</h3>
+                <div id="itemListLocation" class="card-text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="listTemplate" type="text/x-handlebars-template">
+        <div class="entry ml-4 mt-5">
+            <h4>{{name}}</h4>
+            <h5>Price: ${{price}}</h5>
+            <h5>In-Stock: {{inStock}}</h5>
+        </div>
+    </script>
     <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" defer></script>
     <script src="data.js "></script>
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
 </body>
 
 </html>
