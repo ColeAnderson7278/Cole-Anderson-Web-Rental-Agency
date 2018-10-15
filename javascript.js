@@ -7,6 +7,7 @@ function makingItemList() {
             image: item.image,
             name: item.name,
             price: item.price,
+            engine: item.engine,
             inStock: item.inStock
         });
         document
