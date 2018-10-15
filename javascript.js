@@ -3,130 +3,25 @@ var template = Handlebars.compile(source);
 
 function makingItemList() {
     for (item of PAGE_DATA.items) {
-        if (item.name === "Car") {
-            var html = template({
-                name: item.name,
-                price: item.price,
-                inStock: item.inStock
-            });
-            document.querySelector("#carListLocation").innerHTML = html;
-        } else if (item.name === "Truck") {
-            var html = template({
-                name: item.name,
-                price: item.price,
-                inStock: item.inStock
-            });
-            document.querySelector("#truckListLocation").innerHTML = html;
-        } else if (item.name === "Motorcycle") {
-            var html = template({
-                name: item.name,
-                price: item.price,
-                inStock: item.inStock
-            });
-            document.querySelector("#motorcycleListLocation").innerHTML = html;
-        }
+        var html = template({
+            name: item.name,
+            price: item.price,
+            inStock: item.inStock
+        });
+        document
+            .querySelector("#listLocation")
+            .insertAdjacentHTML("beforeend", html);
     }
 }
 
 makingItemList();
 
-function carRentButton() {
-    for (item of PAGE_DATA.items) {
-        if (item.name === "Car") {
-            if (item.inStock > 0) {
-                var html = template({
-                    name: item.name,
-                    price: item.price,
-                    inStock: (item.inStock -= 1)
-                });
-                addToCart();
-                addToTotal(item.price);
-                document.querySelector("#carListLocation").innerHTML = html;
-            } else {
-                var html = template({
-                    name: item.name,
-                    price: item.price,
-                    inStock: 0
-                });
-                document.querySelector("#carListLocation").innerHTML = html;
-            }
-        }
-    }
-}
-
-document
-    .querySelector("#carListLocation")
-    .addEventListener("click", carRentButton);
-
-function truckRentButton() {
-    for (item of PAGE_DATA.items) {
-        if (item.name === "Truck") {
-            if (item.inStock > 0) {
-                var html = template({
-                    name: item.name,
-                    price: item.price,
-                    inStock: (item.inStock -= 1)
-                });
-                addToCart();
-                addToTotal(item.price);
-                document.querySelector("#truckListLocation").innerHTML = html;
-            } else {
-                var html = template({
-                    name: item.name,
-                    price: item.price,
-                    inStock: 0
-                });
-                document.querySelector("#truckListLocation").innerHTML = html;
-            }
-        }
-    }
-}
-
-document
-    .querySelector("#truckListLocation")
-    .addEventListener("click", truckRentButton);
-
-function motorcycleRentButton() {
-    for (item of PAGE_DATA.items) {
-        if (item.name === "Motorcycle") {
-            if (item.inStock > 0) {
-                var html = template({
-                    name: item.name,
-                    price: item.price,
-                    inStock: (item.inStock -= 1)
-                });
-                addToCart();
-                addToTotal(item.price);
-                document.querySelector(
-                    "#motorcycleListLocation"
-                ).innerHTML = html;
-            } else {
-                var html = template({
-                    name: item.name,
-                    price: item.price,
-                    inStock: 0
-                });
-                document.querySelector(
-                    "#motorcycleListLocation"
-                ).innerHTML = html;
-            }
-        }
-    }
-}
-
-document
-    .querySelector("#motorcycleListLocation")
-    .addEventListener("click", motorcycleRentButton);
-
 function addToCart() {
-    var shoppingCart = document.querySelector("#shoppingCartNum");
-    shoppingCart.innerHTML = Number(shoppingCart.innerHTML) + 1;
+    var inCart = document.querySelector("#shoppingCartNum");
+    inCart.innerText = Number(inCart.innerText) + 1;
 }
 
-function addToTotal(price) {
-    var total = document.querySelector("#totalNum");
-    total.innerHTML = Number(total.innerHTML) + Number(price);
-}
+document.querySelector("#listLocation").addEventListener("click", addToCart);
 
 function showForm() {
     formTemplate = `<form class="ml-1">
@@ -144,19 +39,20 @@ function showForm() {
       <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
     </div>
     <div class="d-flex">
-        <div class="form-check mr-2">
+        <h4>Choose Payment Type:</h4>
+        <div class="form-check ml-2">
         <input class="form-check-input" type="radio" name="paymentType" value="option1" checked>
         <label class="form-check-label">
           Cash
         </label>
         </div>
-        <div class="form-check mr-2">
+        <div class="form-check ml-2">
           <input class="form-check-input" type="radio" name="paymentType" value="option2">
           <label class="form-check-label">
             Check
           </label>
         </div>
-        <div class="form-check">
+        <div class="form-check ml-2">
           <input class="form-check-input" type="radio" name="paymentType" value="option3">
           <label class="form-check-label">
             Card
