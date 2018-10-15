@@ -1,4 +1,4 @@
-var source = document.querySelector("#listTemplate").innerHTML;
+var source = document.querySelector(".listTemplate").innerHTML;
 var template = Handlebars.compile(source);
 
 function makingItemList() {
@@ -10,19 +10,31 @@ function makingItemList() {
             inStock: item.inStock
         });
         document
-            .querySelector("#listLocation")
+            .querySelector(".listLocation")
             .insertAdjacentHTML("beforeend", html);
     }
 }
 
 makingItemList();
 
+function removeStock() {
+    for (card of document.querySelectorAll(".itemCard")) {
+        card.querySelector(".rentButton").addEventListener("click", function() {
+            console.log(card.querySelector(".cardName").innerHTML);
+        });
+    }
+}
+
+removeStock();
+
 function addToCart() {
-    var inCart = document.querySelector("#shoppingCartNum");
+    var inCart = document.querySelector(".shoppingCartNum");
     inCart.innerText = Number(inCart.innerText) + 1;
 }
 
-document.querySelector("#listLocation").addEventListener("click", addToCart);
+document
+    .querySelector(".listLocation .rentButton")
+    .addEventListener("click", addToCart);
 
 function showForm() {
     formTemplate = `<form class="ml-1">
@@ -62,17 +74,17 @@ function showForm() {
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     </form>`;
-    document.querySelector("#purchasePage").innerHTML = formTemplate;
+    document.querySelector(".purchasePage").innerHTML = formTemplate;
 }
 
-document.querySelector("#checkOutButton").addEventListener("click", showForm);
+document.querySelector(".checkOutButton").addEventListener("click", showForm);
 
 function turnOnCheckOut() {
-    var cartNum = Number(document.querySelector("#shoppingCartNum").innerText);
+    var cartNum = Number(document.querySelector(".shoppingCartNum").innerText);
     if (cartNum > 0) {
-        document.querySelector("#checkOutButton").disabled = false;
+        document.querySelector(".checkOutButton").disabled = false;
     } else {
-        document.querySelector("#checkOutButton").disabled = true;
+        document.querySelector(".checkOutButton").disabled = true;
     }
 }
 
