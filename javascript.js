@@ -17,24 +17,28 @@ function makingItemList() {
 
 makingItemList();
 
-function removeStock() {
-    for (card of document.querySelectorAll(".itemCard")) {
-        card.querySelector(".rentButton").addEventListener("click", function() {
-            console.log(card.querySelector(".cardName").innerHTML);
+function checkForRent() {
+    var cards = document.querySelectorAll(".itemCard");
+    cards.forEach(function(button, index) {
+        button.addEventListener("click", function() {
+            removeStock(index);
+            addToCart();
         });
-    }
+    });
 }
 
-removeStock();
+checkForRent();
+
+function removeStock(cardIndex) {
+    var cards = document.querySelectorAll(".itemCard");
+    cards[cardIndex].querySelector(".cardStock").innerHTML =
+        cards[cardIndex].querySelector(".cardStock").innerHTML - 1;
+}
 
 function addToCart() {
     var inCart = document.querySelector(".shoppingCartNum");
     inCart.innerText = Number(inCart.innerText) + 1;
 }
-
-document
-    .querySelector(".listLocation .rentButton")
-    .addEventListener("click", addToCart);
 
 function showForm() {
     formTemplate = `<form class="ml-1">
