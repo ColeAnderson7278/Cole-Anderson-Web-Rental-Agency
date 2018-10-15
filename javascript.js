@@ -23,6 +23,7 @@ function checkForRent() {
         button.addEventListener("click", function() {
             if (cards[index].querySelector(".cardStock").innerText > 0) {
                 removeStock(index);
+                addToTotal(cards[index].querySelector(".cardPrice").innerText);
                 addToCart();
             }
         });
@@ -40,6 +41,12 @@ function removeStock(cardIndex) {
 function addToCart() {
     var inCart = document.querySelector(".shoppingCartNum");
     inCart.innerText = Number(inCart.innerText) + 1;
+}
+
+function addToTotal(num) {
+    document.querySelector(".totalPriceNum").innerText =
+        Number(document.querySelector(".totalPriceNum").innerText) +
+        Number(num);
 }
 
 function showForm() {
