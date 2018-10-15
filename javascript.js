@@ -4,6 +4,7 @@ var template = Handlebars.compile(source);
 function makingItemList() {
     for (item of PAGE_DATA.items) {
         var html = template({
+            image: item.image,
             name: item.name,
             price: item.price,
             inStock: item.inStock

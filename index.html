@@ -37,10 +37,15 @@
         <button id="checkOutButton" class="btn btn-block bg-success text-light">Check Out</button>
     </div>
     <script id="listTemplate" type="text/x-handlebars-template">
-        <div class="entry ml-4 mt-5">
-            <h4>{{name}}</h4>
-            <h5>Price: ${{price}}</h5>
-            <h5>In-Stock: {{inStock}}</h5>
+        <div class="entry card mt-2 p-3">
+            <div class="d-flex">
+                <div>
+                    <h4>{{name}}</h4>
+                    <h5>Price: ${{price}}</h5>
+                    <h5>In-Stock: {{inStock}}</h5>
+                </div>
+                <img class="ml-5" src={{image}}>
+            </div>
             <button class="btn bg-primary text-light">Rent</button>
         </div>
     </script>
