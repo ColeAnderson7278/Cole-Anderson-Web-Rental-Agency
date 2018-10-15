@@ -21,8 +21,10 @@ function checkForRent() {
     var cards = document.querySelectorAll(".itemCard");
     cards.forEach(function(button, index) {
         button.addEventListener("click", function() {
-            removeStock(index);
-            addToCart();
+            if (cards[index].querySelector(".cardStock").innerText > 0) {
+                removeStock(index);
+                addToCart();
+            }
         });
     });
 }
