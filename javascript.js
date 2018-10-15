@@ -66,3 +66,14 @@ function showForm() {
 }
 
 document.querySelector("#checkOutButton").addEventListener("click", showForm);
+
+function turnOnCheckOut() {
+    var cartNum = Number(document.querySelector("#shoppingCartNum").innerText);
+    if (cartNum > 0) {
+        document.querySelector("#checkOutButton").disabled = false;
+    } else {
+        document.querySelector("#checkOutButton").disabled = true;
+    }
+}
+
+document.querySelector("body").addEventListener("click", turnOnCheckOut);
