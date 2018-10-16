@@ -121,7 +121,7 @@ function showForm() {
     <div class="form-group">
         <h4>Contact Info:</h4>
       <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Phone Number" required>
-      <input type="email" class="form-control" placeholder="Enter email" required>
+      <input type="email" class="form-control" placeholder="Email" required>
     </div>
     <div>
         <h4>Choose Payment Type:</h4>

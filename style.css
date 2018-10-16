@@ -4,7 +4,11 @@
     grid-gap: 20px;
 }
 
-@media screen and (min-width: 900px) {
+.cardImage {
+    height: 200px;
+}
+
+@media screen and (min-width: 1050px) {
     .listLocation {
         grid-template-columns: 1fr 1fr;
         margin: 20px;
