@@ -52,15 +52,17 @@ function addToTotal(num) {
 }
 
 function showForm() {
-    formTemplate = `<form class="ml-1">
-    <h3>Rental Form:</h3>
-    <div class="form-group d-flex">
+    formTemplate = `<form class="m-2">
+    <div class="card form-group p-1 bg-primary">    
+        <h4 class="card-header text-light">Name:</h4>
       <input type="text" pattern="[A-Za-z]" class="form-control" placeholder="First Name" required>
       <input type="text" pattern="[A-Za-z]" class="form-control" placeholder="Last Name" required>
     </div>
-    <div class="form-group d-flex">
-      <input type="text" class="form-control" placeholder="Address" required>
-      <select class="text-muted form-control" placeholder="State" required>
+    <div class="card form-group p-1 bg-primary">
+    <h4 class="card-header text-light">Location:</h4>
+      <input type="text" class="form-control" placeholder="Street" required>
+      <input type="text" class="form-control" placeholder="City" required>
+      <select class="text-muted form-control" required>
         <option disabled selected>State</option>
         <option>AL</option>
         <option>AK</option>
@@ -115,14 +117,13 @@ function showForm() {
         <option>WY</option>
       </select>
       <input type="number" pattern="[0-9]{6}" class="form-control" placeholder="ZIP Code" required>      </div>
-    <div class="form-group">
-      <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Phone Number" required>
-    </div> 
-    <div class="form-group">
-      <input type="email" class="form-control" placeholder="Enter email" required>
+    <div class="card form-group p-1 bg-primary">
+        <h4 class="card-header text-light">Contact:</h4>
+        <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Phone Number" required>
+        <input type="email" class="form-control" placeholder="Enter email" required>
     </div>
-    <div class="d-flex">
         <h4>Choose Payment Type:</h4>
+        <div class="d-flex p-2">
         <div class="form-check ml-2">
         <input class="form-check-input" type="radio" name="paymentType" value="option1" checked>
         <label class="form-check-label">
@@ -141,8 +142,8 @@ function showForm() {
             Card
           </label>
         </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    <button type="submit" class="btn btn-block btn-primary">Submit</button>
     </form>`;
     document.querySelector(".purchasePage").innerHTML = formTemplate;
 }
