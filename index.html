@@ -20,35 +20,31 @@
             <i class="fas fa-car"></i> Auto Rental Agency</h1>
     </div>
     <div class="purchasePage">
-        <div class="card">
-            <div class="card-body">
-                <div class="card-header d-flex justify-content-between">
-                    <h1>
-                        Listings:</h1>
-                    <div>
-                        <div>
-                            <div class="d-flex">
-                                <h3>
-                                    <i class="fas fa-shopping-cart pr-1"></i>Shopping Cart:</h4>
-                                    <h3 class="shoppingCartNum pl-2">0</h3>
-                            </div>
-                            <div class="d-flex">
-                                <h3>
-                                    <i class="fas fa-money-bill-wave-alt pr-1"></i>Total: $</h4>
-                                    <h3 class="totalPriceNum">0</h3>
-                            </div>
-                        </div>
+        <div class="card-header d-flex justify-content-end bg-light border-light">
+            <div>
+                <div>
+                    <div class="d-flex pr-5">
+                        <h3>
+                            <i class="fas fa-shopping-cart pr-1"></i>Shopping Cart:</h4>
+                            <h3 class="shoppingCartNum pl-2">0</h3>
+                    </div>
+                    <div class="d-flex">
+                        <h3>
+                            <i class="fas fa-money-bill-wave-alt pr-1"></i>Total: $</h4>
+                            <h3 class="totalPriceNum">0</h3>
                     </div>
                 </div>
-                <div class="listLocation card-text">
-                </div>
             </div>
+        </div>
+        <div class="listLocation card-text">
         </div>
         <button class="checkOutButton btn btn-block bg-success text-light" disabled>Check Out</button>
     </div>
     <script class="listTemplate" type="text/x-handlebars-template">
-        <div class="itemCard entry card mt-2 p-3">
-            <div class="d-flex justify-content-around">
+        <div class="itemCard card mt-2 p-3">
+            <div class="d-flex justify-content-center">
+            <div class="infoHolder justify-content-around">
+                <img class="cardImage" class="ml-5" src={{image}}>
                 <div class="mr-4">
                     <h4 class="cardName">{{name}}</h4>
                     <div class="d-flex">
@@ -61,8 +57,8 @@
                             <h5 class="cardStock">{{inStock}}</h5>
                     </div>
                 </div>
-                <img class="cardImage" class="ml-5" src={{image}}>
             </div>
+        </div>
             <button class="rentButton btn bg-primary text-light">Rent</button>
         </div>
     </script>

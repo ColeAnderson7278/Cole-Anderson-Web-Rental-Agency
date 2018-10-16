@@ -1,0 +1,15 @@
+.listLocation {
+    display: grid;
+    margin: 20px;
+    grid-gap: 20px;
+}
+
+@media screen and (min-width: 900px) {
+    .listLocation {
+        grid-template-columns: 1fr 1fr;
+        margin: 20px;
+    }
+    .infoHolder {
+        display: flex;
+    }
+}
