@@ -52,7 +52,7 @@ function addToTotal(num) {
 }
 
 function showForm() {
-    formTemplate = `<form class="card bg-info m-1 p-2">
+    formTemplate = `<form class="card m-1 p-2">
     <div class="form-group">
     <h4>Name:</h4>
       <input type="text" pattern="[A-Za-z]" class="form-control" placeholder="First Name" required>
