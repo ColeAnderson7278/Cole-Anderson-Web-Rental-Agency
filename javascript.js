@@ -53,17 +53,72 @@ function addToTotal(num) {
 function showForm() {
     formTemplate = `<form class="ml-1">
     <h3>Rental Form:</h3>
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Name" required>
+    <div class="form-group d-flex">
+      <input type="text" pattern="[A-Za-z]" class="form-control" placeholder="First Name" required>
+      <input type="text" pattern="[A-Za-z]" class="form-control" placeholder="Last Name" required>
     </div>
-    <div class="form-group">
+    <div class="form-group d-flex">
       <input type="text" class="form-control" placeholder="Address" required>
-    </div>
+      <select class="text-muted form-control" placeholder="State" required>
+        <option disabled selected>State</option>
+        <option>AL</option>
+        <option>AK</option>
+        <option>AZ</option>
+        <option>AR</option>
+        <option>CA</option>
+        <option>CO</option>
+        <option>CT</option>
+        <option>DE</option>
+        <option>FL</option>
+        <option>GA</option>
+        <option>HI</option>
+        <option>ID</option>
+        <option>IL</option>
+        <option>IN</option>
+        <option>IA</option>
+        <option>KS</option>
+        <option>KY</option>
+        <option>LA</option>
+        <option>ME</option>
+        <option>MD</option>
+        <option>MA</option>
+        <option><MI/option>
+        <option>MN</option>
+        <option>MS</option>
+        <option>MO</option>
+        <option>MT</option>
+        <option>NE</option>
+        <option>NE</option>
+        <option>NV</option>
+        <option>NH</option>
+        <option>NJ</option>
+        <option>NM</option>
+        <option>NY</option>
+        <option>NC</option>
+        <option>ND</option>
+        <option>OH</option>
+        <option>OK</option>
+        <option>OR</option>
+        <option>PA</option>
+        <option>RI</option>
+        <option>SC</option>
+        <option>SD</option>
+        <option>TN</option>
+        <option>TX</option>
+        <option>UT</option>
+        <option>VT</option>
+        <option>VA</option>
+        <option>WA</option>
+        <option>WV</option>
+        <option>WI</option>
+        <option>WY</option>
+      </select>
+      <input type="number" pattern="[0-9]{6}" class="form-control" placeholder="ZIP Code" required>      </div>
     <div class="form-group">
-      <input type="phone" class="form-control" placeholder="Phone Number" required>
-    </div>
+      <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Phone Number" required>
+    </div> 
     <div class="form-group">
-      <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email" required>
+      <input type="email" class="form-control" placeholder="Enter email" required>
     </div>
     <div class="d-flex">
         <h4>Choose Payment Type:</h4>
