@@ -8,6 +8,13 @@
     height: 200px;
 }
 
+.checkOutButton {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 @media screen and (min-width: 1050px) {
     .listLocation {
         grid-template-columns: 1fr 1fr;
@@ -15,5 +22,9 @@
     }
     .infoHolder {
         display: flex;
+    }
+    .checkOutHeader {
+        display: flex;
+        justify-content: space-between;
     }
 }

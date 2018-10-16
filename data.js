@@ -46,7 +46,7 @@ const PAGE_DATA = {
             name: "Chrysler 300",
             price: "65",
             engine: "3.6 Liter / V6",
-            inStock: 4
+            inStock: 9
         },
         {
             image:
@@ -54,7 +54,7 @@ const PAGE_DATA = {
             name: "Indian Scout",
             price: "80",
             engine: "111 V-Twin",
-            inStock: 2
+            inStock: 4
         },
         {
             image:

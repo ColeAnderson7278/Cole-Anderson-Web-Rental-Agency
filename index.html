@@ -20,53 +20,49 @@
             <i class="fas fa-car"></i> Auto Rental Agency</h1>
     </div>
     <div class="purchasePage">
-        <div class="card-header d-flex justify-content-end bg-light border-light">
-            <div>
-                <div>
-                    <div class="d-flex">
-                        <h3>
-                            <i class="fas fa-shopping-cart pr-1"></i>Shopping Cart:</h4>
-                            <h3 class="shoppingCartNum pl-2">0</h3>
-                    </div>
-                    <div class="d-flex">
-                        <h3>
-                            <i class="fas fa-money-bill-wave-alt pr-1"></i>Total: $</h4>
-                            <h3 class="totalPriceNum">0</h3>
-                    </div>
-                </div>
+        <div class="checkOutHeader bg-success border-light p-1">
+            <div class="d-flex">
+                <h3>
+                    <i class="fas fa-shopping-cart pr-1 "></i>Shopping Cart:</h3>
+                <h3 class="shoppingCartNum pl-2 ">0</h3>
+            </div>
+            <div class="d-flex">
+                <h3>
+                    <i class="fas fa-money-bill-wave-alt pr-1 "></i>Total: $</h3>
+                <h3 class="totalPriceNum ">0</h3>
             </div>
         </div>
-        <div class="listLocation card-text">
+        <div class="listLocation card-text ">
         </div>
-        <button class="checkOutButton btn btn-block bg-success text-light" disabled>Check Out</button>
+        <button class="checkOutButton btn btn-block bg-success text-light " disabled>Check Out</button>
     </div>
-    <script class="listTemplate" type="text/x-handlebars-template">
-        <div class="itemCard card mt-2 p-3">
-            <div class="d-flex justify-content-center">
-            <div class="infoHolder justify-content-around">
-                <img class="cardImage" class="ml-5" src={{image}}>
-                <div class="mr-4">
-                    <h3 class="cardName">{{name}}</h3>
-                    <div class="d-flex">
+    <script class="listTemplate " type="text/x-handlebars-template ">
+        <div class="itemCard card mb-2 p-3 ">
+            <div class="d-flex justify-content-center ">
+            <div class="infoHolder justify-content-around ">
+                <img class="cardImage " class="ml-5 " src={{image}}>
+                <div class="mr-4 ">
+                    <h3 class="cardName ">{{name}}</h3>
+                    <div class="d-flex ">
                             <h5>Price: $</h5>
-                            <h5 class="cardPrice">{{price}}</h5>
+                            <h5 class="cardPrice ">{{price}}</h5>
                     </div>
                     <h5>Engine Type: {{engine}}</h5>
-                    <div class="d-flex">
-                            <h5 class="pr-1">In-Stock:</h5>
-                            <h5 class="cardStock">{{inStock}}</h5>
+                    <div class="d-flex ">
+                            <h5 class="pr-1 ">In-Stock:</h5>
+                            <h5 class="cardStock ">{{inStock}}</h5>
                     </div>
                 </div>
             </div>
         </div>
-            <button class="rentButton btn bg-primary text-light">Rent</button>
+            <button class="rentButton btn bg-primary text-light ">Rent</button>
         </div>
     </script>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js" defer></script>
+    <script src="js/jquery.js "></script>
+    <script src="js/bootstrap.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js " defer></script>
     <script src="data.js "></script>
-    <script src="javascript.js" defer></script>
+    <script src="javascript.js " defer></script>
 </body>
 
 </html>

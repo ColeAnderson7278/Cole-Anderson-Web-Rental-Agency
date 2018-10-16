@@ -55,8 +55,8 @@ function showForm() {
     formTemplate = `<form class="card m-1 p-2">
     <div class="form-group">
     <h4>Name:</h4>
-      <input type="text" pattern="[A-Za-z]" class="form-control" placeholder="First Name" required>
-      <input type="text" pattern="[A-Za-z]" class="form-control" placeholder="Last Name" required>
+      <input type="text" class="form-control" placeholder="First Name" required>
+      <input type="text" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="form-group">
     <h4>Address:</h4>
@@ -85,7 +85,7 @@ function showForm() {
         <option>ME</option>
         <option>MD</option>
         <option>MA</option>
-        <option><MI/option>
+        <option>MI</option>
         <option>MN</option>
         <option>MS</option>
         <option>MO</option>
@@ -116,11 +116,11 @@ function showForm() {
         <option>WI</option>
         <option>WY</option>
       </select>
-      <input type="number" pattern="[0-9]{6}" class="form-control" placeholder="ZIP Code" required>
+      <input type="text" pattern="[0-9]{6}" class="form-control" placeholder="ZIP Code" required>
       </div>
     <div class="form-group">
         <h4>Contact Info:</h4>
-      <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Phone Number" required>
+      <input type="text" pattern="[0-9]{10}" class="form-control" placeholder="Phone Number" required>
       <input type="email" class="form-control" placeholder="Email" required>
     </div>
     <div>
