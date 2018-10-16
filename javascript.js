@@ -20,7 +20,8 @@ makingItemList();
 
 function checkForRent() {
     var cards = document.querySelectorAll(".itemCard");
-    cards.forEach(function(button, index) {
+    var buttons = document.querySelectorAll(".rentButton");
+    buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
             if (cards[index].querySelector(".cardStock").innerText > 0) {
                 removeStock(index);
