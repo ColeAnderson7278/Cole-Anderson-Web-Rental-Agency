@@ -28,6 +28,12 @@ function checkForRent() {
                 removeStock(index);
                 addToTotal(cards[index].querySelector(".cardPrice").innerText);
                 addToCart();
+            } else {
+                cards[index].querySelector(".rentButton").innerText =
+                    "Out of Stock";
+                cards[index]
+                    .querySelector(".rentButton")
+                    .classList.replace("bg-primary", "bg-secondary");
             }
         });
     });
