@@ -15,6 +15,18 @@
     width: 100%;
 }
 
+.rentalHeader {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1030;
+}
+
 @media screen and (min-width: 1050px) {
     .listLocation {
         grid-template-columns: 1fr 1fr;
@@ -26,5 +38,11 @@
     .checkOutHeader {
         display: flex;
         justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .rentalHeader {
+        display: flex;
     }
 }

@@ -146,7 +146,7 @@ function showForm() {
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
     </form>`;
-    document.querySelector(".purchasePage").innerHTML = formTemplate;
+    document.querySelector(".rentalContainer").innerHTML = formTemplate;
 }
 
 document.querySelector(".checkOutButton").addEventListener("click", showForm);

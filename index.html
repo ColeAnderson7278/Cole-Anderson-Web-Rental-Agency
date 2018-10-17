@@ -16,26 +16,29 @@
 </head>
 
 <body>
-    <div class="bg-success text-light p-2">
-        <h1 class="display-4">
-            <i class="fas fa-car"></i> Auto Rental Agency</h1>
-    </div>
-    <div class="purchasePage">
-        <div class="checkOutHeader bg-success text-light p-1">
+    <div class="rentalHeader justify-content-between fixed-top bg-success">
+        <div class="d-flex align-items-center text-light p-2">
+            <h2 class="">
+                <i class="fas fa-car"></i> Auto Rentals</h2>
+        </div>
+        <div class="purchasePage text-light p-2">
             <div class="d-flex">
-                <h3>
-                    <i class="fas fa-shopping-cart pr-1 "></i>Shopping Cart:</h3>
-                <h3 class="shoppingCartNum pl-2 ">0</h3>
+                <h4>
+                    <i class="fas fa-shopping-cart pr-1 "></i>Shopping Cart:</h4>
+                <h4 class="shoppingCartNum pl-2 ">0</h4>
             </div>
             <div class="d-flex">
-                <h3>
-                    <i class="fas fa-money-bill-wave-alt pr-1 "></i>Total: $</h3>
-                <h3 class="totalPriceNum ">0</h3>
+                <h4>
+                    <i class="fas fa-money-bill-wave-alt pr-1"></i>Total: $</h4>
+                <h4 class="totalPriceNum ">0</h34>
             </div>
         </div>
+    </div>
+    <div class="rentalContainer">
         <div class="listLocation card-text ">
         </div>
         <button class="checkOutButton btn btn-block bg-success text-light " disabled>Check Out</button>
+    </div>
     </div>
     <script class="listTemplate " type="text/x-handlebars-template ">
         <div class="itemCard card mb-2 p-3 ">
