@@ -49,6 +49,9 @@
     .rentalHeader {
         display: flex;
     }
+    .infoHolder {
+        display: flex;
+    }
     .cardImage {
         width: 300px;
     }
