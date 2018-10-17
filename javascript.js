@@ -8,6 +8,7 @@ function makingItemList() {
             name: item.name,
             price: item.price,
             engine: item.engine,
+            capacity: item.capacity,
             inStock: item.inStock
         });
         document

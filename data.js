@@ -6,6 +6,7 @@ const PAGE_DATA = {
             name: "Maserati Granturismo",
             price: "100",
             engine: "4.7 Liter / V8",
+            capacity: "4",
             inStock: 6
         },
         {
@@ -14,6 +15,7 @@ const PAGE_DATA = {
             name: "Audi A4",
             price: "70",
             engine: "2.0 Liter / I4",
+            capacity: "5",
             inStock: 10
         },
         {
@@ -22,6 +24,7 @@ const PAGE_DATA = {
             name: "Ram 2500",
             price: "85",
             engine: "6.4 Liter / V8",
+            capacity: "5",
             inStock: 5
         },
         {
@@ -30,6 +33,7 @@ const PAGE_DATA = {
             name: "Ford F-150 Shelby Raptor",
             price: "125",
             engine: "5.7 Liter / V8",
+            capacity: "5",
             inStock: 2
         },
         {
@@ -38,6 +42,7 @@ const PAGE_DATA = {
             name: "Corvette Stingray",
             price: "150",
             engine: "6.2 Liter / V8",
+            capacity: "2",
             inStock: 4
         },
         {
@@ -46,6 +51,7 @@ const PAGE_DATA = {
             name: "Dodge Durango",
             price: "70",
             engine: "3.6 Liter / V6",
+            capacity: "7",
             inStock: 12
         },
         {
@@ -54,6 +60,7 @@ const PAGE_DATA = {
             name: "Cadillac Escalade",
             price: "75",
             engine: "6.2 Liter / V8",
+            capacity: "7",
             inStock: 8
         },
         {
@@ -62,6 +69,7 @@ const PAGE_DATA = {
             name: "Ford Focus",
             price: "50",
             engine: "2.3 Liter / I4",
+            capacity: "5",
             inStock: 7
         },
         {
@@ -70,6 +78,7 @@ const PAGE_DATA = {
             name: "Volkswagen Golf",
             price: "35",
             engine: "2.0 Liter /  I4",
+            capacity: "5",
             inStock: 11
         },
         {
@@ -78,6 +87,7 @@ const PAGE_DATA = {
             name: "Chrysler 300",
             price: "65",
             engine: "3.6 Liter / V6",
+            capacity: "5",
             inStock: 9
         },
         {
@@ -86,6 +96,7 @@ const PAGE_DATA = {
             name: "Indian Scout",
             price: "80",
             engine: "111 V-Twin",
+            capacity: "1",
             inStock: 4
         },
         {
@@ -94,6 +105,7 @@ const PAGE_DATA = {
             name: "Ducati Monster 1200",
             price: "100",
             engine: "803cc",
+            capacity: "1",
             inStock: 5
         }
     ]
