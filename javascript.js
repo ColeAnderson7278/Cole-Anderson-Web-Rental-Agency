@@ -123,7 +123,7 @@ function showForm() {
         <option>WI</option>
         <option>WY</option>
       </select>
-      <input type="text" pattern="[0-9]{6}" class="form-control" placeholder="ZIP Code" required>
+      <input type="text" pattern="[0-9]{5}" class="form-control" placeholder="ZIP Code" required>
       </div>
     <div class="form-group">
         <h4>Contact Info:</h4>
