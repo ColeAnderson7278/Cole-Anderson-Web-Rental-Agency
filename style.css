@@ -4,8 +4,12 @@
     grid-gap: 20px;
 }
 
+.cardName {
+    font-weight: bold;
+}
+
 .cardImage {
-    width: 300px;
+    width: 250px;
 }
 
 .checkOutButton {
@@ -27,7 +31,7 @@
     z-index: 1030;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1210px) {
     .listLocation {
         grid-template-columns: 1fr 1fr;
         margin: 20px;
@@ -44,5 +48,8 @@
 @media screen and (min-width: 600px) {
     .rentalHeader {
         display: flex;
+    }
+    .cardImage {
+        width: 300px;
     }
 }
