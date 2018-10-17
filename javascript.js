@@ -9,7 +9,7 @@ function makingItemList() {
             price: item.price,
             engine: item.engine,
             capacity: item.capacity,
-            inStock: item.inStock
+            stock: item.stock
         });
         document
             .querySelector(".listLocation")
@@ -19,27 +19,34 @@ function makingItemList() {
 
 makingItemList();
 
-function checkForRent() {
+function checkForRentButton() {
     var cards = document.querySelectorAll(".itemCard");
     var buttons = document.querySelectorAll(".rentButton");
     buttons.forEach(function(button, index) {
         button.addEventListener("click", function() {
-            if (cards[index].querySelector(".cardStock").innerText > 0) {
-                removeStock(index);
-                addToTotal(cards[index].querySelector(".cardPrice").innerText);
-                addToCart();
-            } else {
-                cards[index].querySelector(".rentButton").innerText =
-                    "Out of Stock";
-                cards[index]
-                    .querySelector(".rentButton")
-                    .classList.replace("bg-primary", "bg-secondary");
+            if (cards[index].querySelector(".cardStock").innerText > 1) {
+                rentItemFunctions(
+                    index,
+                    cards[index].querySelector(".cardPrice").innerText
+                );
+            } else if (cards[index].querySelector(".cardStock").innerText > 0) {
+                rentItemFunctions(
+                    index,
+                    cards[index].querySelector(".cardPrice").innerText
+                );
+                outOfStock(cards, index);
             }
         });
     });
 }
 
-checkForRent();
+checkForRentButton();
+
+function rentItemFunctions(cardIndex, price) {
+    removeStock(cardIndex);
+    addToTotal(price);
+    addToCart();
+}
 
 function removeStock(cardIndex) {
     var cards = document.querySelectorAll(".itemCard");
@@ -57,6 +64,27 @@ function addToTotal(num) {
         Number(document.querySelector(".totalPriceNum").innerText) +
         Number(num);
 }
+
+function outOfStock(list, index) {
+    list[index].querySelector(".rentButton").innerText = "Out of Stock";
+    list[index]
+        .querySelector(".rentButton")
+        .classList.replace("bg-primary", "bg-muted");
+    list[index]
+        .querySelector(".rentButton")
+        .classList.replace("text-light", "text-dark");
+}
+
+function turnOnCheckOut() {
+    var cartNum = Number(document.querySelector(".shoppingCartNum").innerText);
+    if (cartNum > 0) {
+        document.querySelector(".checkOutButton").disabled = false;
+    } else {
+        document.querySelector(".checkOutButton").disabled = true;
+    }
+}
+
+document.querySelector("body").addEventListener("click", turnOnCheckOut);
 
 function showForm() {
     formTemplate = `<form class="card m-1 p-2">
@@ -157,14 +185,3 @@ function showForm() {
 }
 
 document.querySelector(".checkOutButton").addEventListener("click", showForm);
-
-function turnOnCheckOut() {
-    var cartNum = Number(document.querySelector(".shoppingCartNum").innerText);
-    if (cartNum > 0) {
-        document.querySelector(".checkOutButton").disabled = false;
-    } else {
-        document.querySelector(".checkOutButton").disabled = true;
-    }
-}
-
-document.querySelector("body").addEventListener("click", turnOnCheckOut);

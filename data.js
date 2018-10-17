@@ -7,7 +7,7 @@ const PAGE_DATA = {
             price: "100",
             engine: "4.7 Liter / V8",
             capacity: "4",
-            inStock: 6
+            stock: 6
         },
         {
             image:
@@ -16,7 +16,7 @@ const PAGE_DATA = {
             price: "70",
             engine: "2.0 Liter / I4",
             capacity: "5",
-            inStock: 10
+            stock: 10
         },
         {
             image:
@@ -25,7 +25,7 @@ const PAGE_DATA = {
             price: "85",
             engine: "6.4 Liter / V8",
             capacity: "5",
-            inStock: 5
+            stock: 5
         },
         {
             image:
@@ -34,7 +34,7 @@ const PAGE_DATA = {
             price: "125",
             engine: "5.7 Liter / V8",
             capacity: "5",
-            inStock: 2
+            stock: 2
         },
         {
             image:
@@ -43,7 +43,7 @@ const PAGE_DATA = {
             price: "150",
             engine: "6.2 Liter / V8",
             capacity: "2",
-            inStock: 4
+            stock: 4
         },
         {
             image:
@@ -52,7 +52,7 @@ const PAGE_DATA = {
             price: "70",
             engine: "3.6 Liter / V6",
             capacity: "7",
-            inStock: 12
+            stock: 12
         },
         {
             image:
@@ -61,7 +61,7 @@ const PAGE_DATA = {
             price: "75",
             engine: "6.2 Liter / V8",
             capacity: "7",
-            inStock: 8
+            stock: 8
         },
         {
             image:
@@ -70,7 +70,7 @@ const PAGE_DATA = {
             price: "50",
             engine: "2.3 Liter / I4",
             capacity: "5",
-            inStock: 7
+            stock: 7
         },
         {
             image:
@@ -79,7 +79,7 @@ const PAGE_DATA = {
             price: "35",
             engine: "2.0 Liter /  I4",
             capacity: "5",
-            inStock: 11
+            stock: 11
         },
         {
             image:
@@ -88,7 +88,7 @@ const PAGE_DATA = {
             price: "65",
             engine: "3.6 Liter / V6",
             capacity: "5",
-            inStock: 9
+            stock: 9
         },
         {
             image:
@@ -97,7 +97,7 @@ const PAGE_DATA = {
             price: "80",
             engine: "111 V-Twin",
             capacity: "1",
-            inStock: 4
+            stock: 4
         },
         {
             image:
@@ -106,7 +106,7 @@ const PAGE_DATA = {
             price: "100",
             engine: "803cc",
             capacity: "1",
-            inStock: 5
+            stock: 5
         }
     ]
 };
