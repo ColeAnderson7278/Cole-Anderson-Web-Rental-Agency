@@ -90,13 +90,13 @@ function showForm() {
     formTemplate = `<form onSubmit="submitMessage()" class="card m-1 p-2">
     <div class="form-group">
     <h4>Name:</h4>
-      <input value="a" type="text" class="form-control" placeholder="First Name" required>
-      <input value="a" type="text" class="form-control" placeholder="Last Name" required>
+      <input type="text" class="form-control" placeholder="First Name" required>
+      <input type="text" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="form-group">
     <h4>Address:</h4>
-      <input value="a" type="text" class="form-control" placeholder="Street" required>
-      <input value="a" type="text" class="form-control" placeholder="City" required>
+      <input type="text" class="form-control" placeholder="Street" required>
+      <input type="text" class="form-control" placeholder="City" required>
       <select class="text-muted form-control" placeholder="State" required>
         <option disabled selected>State</option>
         <option>AL</option>
@@ -151,12 +151,15 @@ function showForm() {
         <option>WI</option>
         <option>WY</option>
       </select>
-      <input value="11111" type="text" pattern="[0-9]{5}" class="form-control" placeholder="ZIP Code" required>
+      <input type="text" pattern="[0-9]{5}" class="form-control" placeholder="ZIP Code" required>
       </div>
     <div class="form-group">
-        <h4>Contact Info:</h4>
-      <input value="1111111111" type="tel" pattern="[0-9]{10}" class="form-control" placeholder="Phone Number" required>
-      <input value="a@a" type="email" class="form-control" placeholder="Email" required>
+        <h4>Phone Number:</h4>
+      <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Example: 123 123 1234" required>
+    </div>
+    <div class="form-group">
+        <h4>Email:</h4>
+        <input type="email" class="form-control" placeholder="Example: myEmail@mail.com" required>
     </div>
     <div>
         <h4>Choose Payment Type:</h4>
