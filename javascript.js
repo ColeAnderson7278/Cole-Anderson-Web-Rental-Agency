@@ -155,7 +155,7 @@ function showForm() {
       </div>
     <div class="form-group">
         <h4>Phone Number:</h4>
-      <input type="tel" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Example: 123 123 1234" required>
+      <input type="text" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Example: 123 123 1234" required>
     </div>
     <div class="form-group">
         <h4>Email:</h4>
