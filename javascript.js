@@ -87,16 +87,16 @@ function turnOnCheckOut() {
 document.querySelector("body").addEventListener("click", turnOnCheckOut);
 
 function showForm() {
-    formTemplate = `<form class="card m-1 p-2">
+    formTemplate = `<form onSubmit="submitMessage()" class="card m-1 p-2">
     <div class="form-group">
     <h4>Name:</h4>
-      <input type="text" class="form-control" placeholder="First Name" required>
-      <input type="text" class="form-control" placeholder="Last Name" required>
+      <input value="a" type="text" class="form-control" placeholder="First Name" required>
+      <input value="a" type="text" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="form-group">
     <h4>Address:</h4>
-      <input type="text" class="form-control" placeholder="Street" required>
-      <input type="text" class="form-control" placeholder="City" required>
+      <input value="a" type="text" class="form-control" placeholder="Street" required>
+      <input value="a" type="text" class="form-control" placeholder="City" required>
       <select class="text-muted form-control" placeholder="State" required>
         <option disabled selected>State</option>
         <option>AL</option>
@@ -151,12 +151,12 @@ function showForm() {
         <option>WI</option>
         <option>WY</option>
       </select>
-      <input type="text" pattern="[0-9]{5}" class="form-control" placeholder="ZIP Code" required>
+      <input value="11111" type="text" pattern="[0-9]{5}" class="form-control" placeholder="ZIP Code" required>
       </div>
     <div class="form-group">
         <h4>Contact Info:</h4>
-      <input type="tel" pattern="[0-9]{10}" class="form-control" placeholder="Phone Number" required>
-      <input type="email" class="form-control" placeholder="Email" required>
+      <input value="1111111111" type="tel" pattern="[0-9]{10}" class="form-control" placeholder="Phone Number" required>
+      <input value="a@a" type="email" class="form-control" placeholder="Email" required>
     </div>
     <div>
         <h4>Choose Payment Type:</h4>
@@ -179,9 +179,19 @@ function showForm() {
           </label>
         </div>
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="submitButton btn btn-success">Submit</button>
     </form>`;
     document.querySelector(".rentalContainer").innerHTML = formTemplate;
 }
 
 document.querySelector(".checkOutButton").addEventListener("click", showForm);
+
+function submitMessage() {
+    confirm(
+        `Your order of ${
+            document.querySelector(".shoppingCartNum").innerText
+        } vehicle(s) for a total of ${
+            document.querySelector(".totalPriceNum").innerText
+        } per day will now be processed. Please confirm order.`
+    );
+}
