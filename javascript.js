@@ -190,11 +190,18 @@ function showForm() {
 document.querySelector(".checkOutButton").addEventListener("click", showForm);
 
 function submitMessage() {
-    confirm(
+    var choice = confirm(
         `Your order of ${
             document.querySelector(".shoppingCartNum").innerText
         } vehicle(s) for a total of ${
             document.querySelector(".totalPriceNum").innerText
         } per day will now be processed. Please confirm order.`
     );
+    if (choice === true) {
+        alert("Thank you for your business. Please come again soon.");
+    } else {
+        alert(
+            "Sorry if there was any problems with our services, but your order has been cancelled. Thanks for your time."
+        );
+    }
 }
