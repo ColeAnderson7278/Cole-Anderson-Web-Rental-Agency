@@ -1,16 +1,9 @@
-var source = document.querySelector(".listTemplate").innerHTML;
+var source = document.getElementById("listTemplate").innerHTML;
 var template = Handlebars.compile(source);
 
 function makingItemList() {
-    for (item of PAGE_DATA.items) {
-        var html = template({
-            image: item.image,
-            name: item.name,
-            price: item.price,
-            engine: item.engine,
-            capacity: item.capacity,
-            stock: item.stock
-        });
+    for (var item of PAGE_DATA.items) {
+        var html = template(item);
         document
             .querySelector(".listLocation")
             .insertAdjacentHTML("beforeend", html);
@@ -197,8 +190,8 @@ function submitMessage() {
             document.querySelector(".totalPriceNum").innerText
         } per day will now be processed. Please confirm order.`
     );
-    if (choice === true) {
-        swal("Thank you for your business. Please come again soon.");
+    if (choice) {
+        alert("Thank you for your business. Please come again soon.");
     } else {
         alert(
             "Sorry if there was any problems with our services, but your order has been cancelled. Thanks for your time."
