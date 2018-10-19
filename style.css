@@ -9,7 +9,7 @@
 }
 
 .cardImage {
-    width: 250px;
+    height: 180px;
 }
 
 .checkOutButton {
@@ -36,6 +36,7 @@
         grid-template-columns: 1fr 1fr;
         margin: 20px;
     }
+
     .infoHolder {
         display: flex;
     }
