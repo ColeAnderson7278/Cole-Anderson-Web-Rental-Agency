@@ -4,6 +4,10 @@
     grid-gap: 20px;
 }
 
+.homeLink {
+    text-decoration: none !important;
+}
+
 .cardName {
     font-weight: bold;
 }
