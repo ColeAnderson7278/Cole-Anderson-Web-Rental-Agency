@@ -105,8 +105,8 @@ function submitMessage() {
 }
 
 function makeThankYou() {
-    var firstName = document.querySelector(".firstName").value;
-    var lastName = document.querySelector(".lastName").value;
+    var firstName = makeCapitalized(document.querySelector(".firstName").value);
+    var lastName = makeCapitalized(document.querySelector(".lastName").value);
     var source = document.getElementById("thankYouTemplate").innerHTML;
     var template = Handlebars.compile(source);
     var html = template({
@@ -115,4 +115,8 @@ function makeThankYou() {
             "Your order is now being processed, and you can be expecting an email containing your order number, the date purchased, and other information regarding your rental."
     });
     document.body.innerHTML = html;
+}
+
+function makeCapitalized(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
