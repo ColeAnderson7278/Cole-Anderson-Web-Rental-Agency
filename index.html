@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Luxury Rentals</title>
+    <title>Luxury Auto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/512/660/660398.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
@@ -21,7 +21,7 @@
     <div class="rentalHeader justify-content-between fixed-top bg-success">
         <div class="d-flex align-items-center text-light p-2">
             <h2>
-                <i class="far fa-gem"></i> Luxury Rentals</h2>
+                <i class="far fa-gem"></i> Luxury Auto</h2>
         </div>
         <div class="purchasePage text-light p-2">
             <div class="d-flex">
@@ -65,6 +65,116 @@
             <button class="rentButton btn bg-primary text-light">Rent</button>
         </div>
     </script>
+
+    <script id="formTemplate" type="text/x-handlebars-template ">
+        <form onSubmit="submitMessage()" class="card m-1 p-2">
+            <div class="form-group">
+                <h4>Name:</h4>
+                   <input type="text" class="firstName form-control" placeholder="First Name" required>
+                   <input type="text" class="lastName form-control" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <h4>Address:</h4>
+                <input type="text" class="form-control" placeholder="Street" required>
+                <input type="text" class="form-control" placeholder="City" required>
+                <select class="text-muted form-control" placeholder="State" required>
+                    <option disabled selected>State</option>
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>MT</option>
+                    <option>NE</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
+                </select>
+                <input type="text" pattern="[0-9]{5}" class="form-control" placeholder="ZIP Code" required>
+            </div>
+            <div class="form-group">
+                <h4>Phone Number:</h4>
+                <input type="text" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" class="form-control" placeholder="Example: 123 123 1234" required>
+            </div>
+            <div class="form-group">
+                <h4>Email:</h4>
+                <input type="email" class="form-control" placeholder="Example: myEmail@mail.com" required>
+            </div>
+            <div>
+                <h4>Choose Payment Type:</h4>
+                <div class="form-check ml-2">
+                    <input class="form-check-input" type="radio" name="paymentType" value="option1" checked>
+                    <label class="form-check-label">Cash</label>
+                </div>
+                <div class="form-check ml-2">
+                  <input class="form-check-input" type="radio" name="paymentType" value="option2">
+                  <label class="form-check-label">Check</label>
+                </div>
+                <div class="form-check ml-2">
+                  <input class="form-check-input" type="radio" name="paymentType" value="option3">
+                  <label class="form-check-label">Card</label>
+                </div>
+            </div>
+            <button type="submit" class="submitButton btn btn-success">Submit</button>
+        </form>
+    </script>
+
+    <script id="thankYouTemplate" type="text/x-handlebars-template ">
+        <div class="card">
+            <h3 class="card-header d-flex justify-content-center bg-success text-light">{{greeting}}</h3>
+            <h4 class="card-body">{{orderStatus}}</h4>
+        </div>
+        <div class="card">
+            <h3 class="card-header d-flex justify-content-center bg-success text-light">Contact Info</h3>
+            <div class="card-body">
+                <h4>Email: LuxuryAuto@gmail.com</h4>
+                <h4>Phone: (877) 872-1212</h4>
+                <h4>Website: <a href="https://coleanderson7278.github.io/Cole-Anderson-Web-Rental-Agency/">LuxuryAuto.com</a></h4>
+            </div>
+       </div>
+    </script>
+
     <script src="js/jquery.js "></script>
     <script src="js/bootstrap.js "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js " defer></script>
